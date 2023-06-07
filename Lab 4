@@ -29,8 +29,8 @@ class EngAlphabet(Alphabet):
 
 # Тесты
 eng_alphabet = EngAlphabet()
-eng_alphabet.print() # Выводит буквы английского алфавита в консоль
-print("Letters number:", eng_alphabet.letters_num()) # Выводит количество букв в алфавите
-print("Is F an English letter?", eng_alphabet.is_en_letter('F')) # Проверяет, относится ли буква F к английскому алфавиту
-print("Is Щ an English letter?", eng_alphabet.is_en_letter('Щ')) # Проверяет, относится ли буква Щ к английскому алфавиту
-print("Example text:", EngAlphabet.example()) # Выводит пример текста на английском языке
+eng_alphabet.print() 
+print("Letters number:", eng_alphabet.letters_num()) 
+print("Is F an English letter?", eng_alphabet.is_en_letter('F')) 
+print("Is Щ an English letter?", eng_alphabet.is_en_letter('Щ')) 
+print("Example text:", EngAlphabet.example()) 
