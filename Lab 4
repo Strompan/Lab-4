@@ -1,0 +1,36 @@
+import string
+
+class Alphabet:
+    def __init__(self, lang, letters):
+        self.lang = lang
+        self.letters = letters
+        
+    def print(self):
+        print("Letters:", self.letters)
+        
+    def letters_num(self):
+        return len(self.letters)
+
+class EngAlphabet(Alphabet):
+    _letters_num = 26
+    
+    def __init__(self):
+        super().__init__("En", string.ascii_uppercase)
+        
+    def is_en_letter(self, letter):
+        return letter.upper() in self.letters
+    
+    def letters_num(self):
+        return self._letters_num
+    
+    @staticmethod
+    def example():
+        return "The quick brown fox jumps over the lazy dog."
+
+# Тесты
+eng_alphabet = EngAlphabet()
+eng_alphabet.print() # Выводит буквы английского алфавита в консоль
+print("Letters number:", eng_alphabet.letters_num()) # Выводит количество букв в алфавите
+print("Is F an English letter?", eng_alphabet.is_en_letter('F')) # Проверяет, относится ли буква F к английскому алфавиту
+print("Is Щ an English letter?", eng_alphabet.is_en_letter('Щ')) # Проверяет, относится ли буква Щ к английскому алфавиту
+print("Example text:", EngAlphabet.example()) # Выводит пример текста на английском языке
